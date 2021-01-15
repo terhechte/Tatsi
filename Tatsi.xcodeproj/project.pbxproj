@@ -128,6 +128,7 @@
 		0CBB28791F12BEA600254034 /* AssetTypeIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTypeIconView.swift; sourceTree = "<group>"; };
 		0CBB287D1F1389A800254034 /* TypeIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeIcons.swift; sourceTree = "<group>"; };
 		0CBB287F1F138B4100254034 /* LocalizableStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		4DFCE1F625B1EBAE00416315 /* Tatsi Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tatsi Example.entitlements"; sourceTree = "<group>"; };
 		50DE1941236327580031438D /* TatsiColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TatsiColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +176,7 @@
 		0C5B613A1F0D2293005A25CE = {
 			isa = PBXGroup;
 			children = (
+				4DFCE1F625B1EBAE00416315 /* Tatsi Example.entitlements */,
 				0C5B61451F0D2293005A25CE /* Example */,
 				0C5B615E1F0D231D005A25CE /* Tatsi */,
 				0C19D8941F14D3B80087032A /* TatsiTests */,
@@ -430,7 +432,7 @@
 					};
 					0C5B61421F0D2293005A25CE = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = N4KR5KV52L;
+						DevelopmentTeam = 76VT9VZ6GK;
 						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 					};
@@ -726,13 +728,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N4KR5KV52L;
+				CODE_SIGN_ENTITLEMENTS = "Tatsi Example.entitlements";
+				DEVELOPMENT_TEAM = 76VT9VZ6GK;
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.awkward.tatsi-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -741,13 +746,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = N4KR5KV52L;
+				CODE_SIGN_ENTITLEMENTS = "Tatsi Example.entitlements";
+				DEVELOPMENT_TEAM = 76VT9VZ6GK;
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.awkward.tatsi-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

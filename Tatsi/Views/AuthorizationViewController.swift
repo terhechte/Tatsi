@@ -97,8 +97,14 @@ final internal class AuthorizationViewController: UIViewController, PickerViewCo
             self.messageLabel.text = LocalizableStrings.authorizationViewRequestingAccessMessage
             self.settingsButton.isHidden = true
         case .denied, .restricted:
+            #if !targetEnvironment(macCatalyst)
             self.titleLabel.text = LocalizableStrings.authorizationViewNoAccessTitle
             self.messageLabel.text = LocalizableStrings.authorizationViewNoAccessMessage
+            #else
+            self.titleLabel.text = LocalizableStrings.authorizationViewNoAccessTitle
+            self.messageLabel.text = "Please enter the macOS privacy settings to allow access."
+            self.settingsButton.setTitle("Close", for: .normal)
+            #endif
             self.settingsButton.isHidden = false
         default:
             break
@@ -106,6 +112,10 @@ final internal class AuthorizationViewController: UIViewController, PickerViewCo
     }
     
     @objc private func openSettings(_ sender: UIButton) {
+        #if targetEnvironment(macCatalyst)
+        self.dismiss(animated: true, completion: nil)
+        return
+        #endif
         guard let url = URL(string: UIApplication.openSettingsURLString) else {
             return
         }
